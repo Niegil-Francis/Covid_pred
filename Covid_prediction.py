@@ -50,19 +50,28 @@ if( len(option1) != 0):
     forecast = m.predict(future)
     fig=plot_plotly(m, forecast)
     fig.update_layout(
-    title="Forecasting",
+    title="Forecasting for "+str(option2)+" days for the "+option3+" in "+option1,
     xaxis_title="Date",
     yaxis_title=option3)
     st.plotly_chart(fig,config = {'displayModeBar': False})
     cross_validation_results = cross_validation(m,initial='100 days',horizon="50 days")
     performance_metrics_results = performance_metrics(cross_validation_results)
     st.header("The performance of the model")
-    fig=plt.figure(figsize=(15,5))
+    fig=plt.figure(figsize=(15,10))
     ax=fig.add_subplot(111)
-    ax.plot(range(31),performance_metrics_results['mape'][:31])
-    ax.set_xlabel('Number of days for prediction')
-    ax.set_ylabel("Mean absolute percentage error")
-    ax.set_title("Error of the model for the chosen predictor")
+    ax.plot(range(31),performance_metrics_results['mape'][:31],marker="o")
+    ax.set_xlabel('Number of days for prediction',fontsize=16)
+    ax.set_ylabel("Mean absolute percentage error",fontsize=16)
+    ax.set_title("Error of the model for the chosen predictor",fontsize=18)
+    ax.fill_between(range(31), 0, performance_metrics_results['mape'][:31], alpha=.1)
+    #ax.grid('on')
+    ax.set_xlim([0,30])
+    ax.set_ylim([min(performance_metrics_results['mape'][:31]),max(performance_metrics_results['mape'][:31])+.05])
+    #ax.set_xticks([])
+    
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    #ax.bar(range(31),performance_metrics_results['mape'][:31],color = '#007acc',alpha=0.5,width=0.5)
     st.write(fig,config = {'displayModeBar': False})
 
     
