@@ -1,2 +1,2 @@
 # Covid_pred
-Covid predictor
+This is a covid predictor used to predict Covid cases, deaths and recovered count using fbprohet.
