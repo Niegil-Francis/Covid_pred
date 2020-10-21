@@ -55,8 +55,16 @@ if( len(option1) != 0):
     yaxis_title=option3)
     st.plotly_chart(fig,config = {'displayModeBar': False})
     cross_validation_results = cross_validation(m,initial='100 days',horizon="50 days")
-    #horizon='5 days'
-    #, initial='210 days', period='15 days',
     performance_metrics_results = performance_metrics(cross_validation_results)
-    st.write(performance_metrics_results)
+    st.header("The performance of the model")
+    fig=plt.figure(figsize=(15,5))
+    ax=fig.add_subplot(111)
+    ax.plot(range(31),performance_metrics_results['mape'][:31])
+    ax.set_xlabel('Number of days for prediction')
+    ax.set_ylabel("Mean absolute percentage error")
+    ax.set_title("Error of the model for the chosen predictor")
+    st.write(fig,config = {'displayModeBar': False})
+
+    
+    
     
