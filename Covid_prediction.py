@@ -29,11 +29,11 @@ st.markdown(
             '''
             <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Suez+One">
-            <div style="font-family: 'Suez One';font-size:70px; background-color:white; color:black"><center>Covid-19 Global Predictor</center></div>
+            <div style="font-family: 'Suez One';font-size:70px; background-color:white; color:black"><center>Covid-19 Global Forecasting</center></div>
             ''',unsafe_allow_html=True
         )
 st.header(" ")
-st.header("Region-wise predictions")
+st.header("Region-wise forecasting")
 option1 = st.selectbox("Country",countries)
 option2 = st.number_input("Forecast period in days",min_value=1,max_value=30)
 option3 = st.selectbox("Select the forecasted variable",list(type_of_analysis.keys()))
@@ -60,9 +60,9 @@ if( len(option1) != 0):
     fig=plt.figure(figsize=(15,10))
     ax=fig.add_subplot(111)
     ax.plot(range(31),performance_metrics_results['mape'][:31],marker="o")
-    ax.set_xlabel('Number of days for prediction',fontsize=16)
+    ax.set_xlabel('Number of days for forecasting',fontsize=16)
     ax.set_ylabel("Mean absolute percentage error",fontsize=16)
-    ax.set_title("Error of the model for the chosen predictor",fontsize=18)
+    ax.set_title("Error of the model for the chosen forecasted variable",fontsize=18)
     ax.fill_between(range(31), 0, performance_metrics_results['mape'][:31], alpha=.1)
     #ax.grid('on')
     ax.set_xlim([0,30])
