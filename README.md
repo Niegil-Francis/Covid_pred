@@ -1,8 +1,3 @@
-
-This is a covid forecasting app used to forecast Covid cases, deaths and recovered count using fbprohet (a non-linear regressor that employs seasonality of data). It is a univariate analysis that captures the trend of the data and forecasts values based on that.
-Further work will take more factors (such as population, average age and health facilities) into consideration, thus performing multivariate analysis to give a more accurate prediction. 
-The appcan be a
-
 # Covid-19 Global Forecasting
 
 Amidst the unfortunate chaos of COVID-19 around the world, there has been an overload of information regarding the pandemic present online. With such massive amounts of data, it is crucial not only to identify and collect verified information, but to also structure it in a way that allows us to pick worthy insights. In this context, data visualization is perfect for enabling quick and accurate comprehension of information, whilst providing the relevant insights into our current global situation.
