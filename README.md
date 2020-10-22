@@ -1,6 +1,6 @@
 # Covid-19 Global Forecasting
 
-Amidst the unfortunate chaos of COVID-19 around the world, there has been an overload of information regarding the pandemic present online. With such massive amounts of data, it is crucial not only to identify and collect verified information, but to also structure it in a way that allows us to pick worthy insights. In this context, data visualization is perfect for enabling quick and accurate comprehension of information, whilst providing the relevant insights into our current global situation.
+With COVID-19 rising to a pandemic scale, there has been a growing need to understand how to efficiently tackle the situation. In this context, accurate forecasting of the spread of COVID-19 is vital in preparing individuals and countries for what lies ahead.
 
 For this exact purpose, we have created a "Covid-19 Global Forecasting" app - an interactive visualization of the future spread of COVID-19 around the world. Within this dashboard, you can analyse the growth or shrink of Covid-19 cases and deaths based on a region of choice. 
 
