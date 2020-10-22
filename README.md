@@ -19,5 +19,5 @@ In order to run the app locally:
 1. Install streamlit: pip install streamlit
 2. Clone the repository: git clone https://github.com/Niegil-Francis/Covid_pred.git
 3. Install the required packages present in requirements.txt
-4. Change the directory to Covid_App and run: streamlit run Covid_dash.py 
+4. Change the directory to Covid_pred and run: streamlit run Covid_prediction.py 
 
